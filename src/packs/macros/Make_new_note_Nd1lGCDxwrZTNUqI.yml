@@ -1,0 +1,177 @@
+name: Make new note
+type: script
+command: |-
+  // duplicate entries to bias the random choice 
+  const cardOffsetAngles = [358, 359, 359, 0, 1, 1, 2];
+
+  const { DialogV2 } = foundry.applications.api;
+
+  let cardTypes = [ "clue", "location", "person" ];
+  let cardTypesGM = [ "question", "opportunity" ];
+
+  if (game.user.isGM) {
+      cardTypes.push(...cardTypesGM);
+  }
+
+  const cardButtons = cardTypes.map(
+      t => {
+          return {
+              action: t,
+              label: t,
+              callback: () => makeDrawing(t),
+          }
+      }
+  );
+
+
+  const cardType = await DialogV2.wait({
+    window: { title: "What type of card?" },
+    form: { closeOnSubmit: true },
+    content: "Choose card type",
+    buttons: cardButtons,
+    rejectClose: false,
+  });
+
+
+
+
+  function makeDrawing(cardType) {
+      let draw = makeDrawingDoc("...", cardType);
+      console.log("about to call createEmbeddedDocuments with", draw);
+      //DrawingDocument.create(draw, {parent: canvas.scene});
+      canvas.scene.createEmbeddedDocuments("Drawing", [draw]);
+  }
+
+
+
+
+  function makeDrawingDoc(initialText, cardType) {
+    const angle = cardOffsetAngles[Math.floor(
+        Math.random()*cardOffsetAngles.length)];
+
+    return {
+      "texture": `modules/penllawen-murderboard-scenes/imgs/index-card-cropped-${cardType}.png`,
+      "text": initialText,
+      "rotation": cardOffsetAngles[Math.floor(
+        Math.random()*cardOffsetAngles.length)],
+
+      "author": game.user,
+      
+      "hidden": cardTypesGM.includes(cardType) ? true : false,
+      
+      // not working due to Foundry limitations; DrawingDocuments do not appear to support
+      // the same permissions model as most other documents do.
+      // "ownership": {
+      //     [game.user]: CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER,
+      //     "default": CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER,
+      // },
+      "ownership": { default: 3 },
+      
+      
+      "x": 2000 + Math.floor(Math.random()*200),
+      "y": 1000 + Math.floor(Math.random()*200),
+
+      // boilerplate below here
+      "shape": {
+          "type": "r",
+          "width": 483,
+          "height": 379,
+          "radius": null,
+          "points": []
+      },
+      "elevation": 0,
+      "sort": 1,
+      
+      "bezierFactor": 0.15,
+      "fillType": 2,
+      "fillColor": "#ffffff",
+      "fillAlpha": 1,
+      "strokeWidth": 0,
+      "strokeColor": "#ffffff",
+      "strokeAlpha": 1,
+      "fontFamily": "Permanent Marker",
+      "fontSize": 48,
+      "textColor": "#171717",
+      "textAlpha": 0.9,
+      "locked": false,
+      "interface": false,
+      "flags": {
+          "tagger": {},
+          "advanced-drawing-tools": {
+              "textStyle": {
+                  "strokeThickness": 0,
+                  "wordWrapWidth": "95%",
+                  "dropShadow": false,
+                  "align": "center"
+              }
+          }
+      },
+      // "_id": "s5i14guVTECDTRcw"
+      };
+      
+  }
+
+
+
+
+  // archive 
+
+  // const cardType = await DialogV2.wait({
+  //   window: { title: "What type of card?" },
+  //   form: { closeOnSubmit: true },
+  //   content: "Choose card type",
+  //   buttons: [
+  //     {
+  //       action: "Location",
+  //       default: true,
+  //       label: "Location",
+  //       callback: () => "location",
+  //     },
+  //     {
+  //       action: "Clue",
+  //       default: false,
+  //       label: "Clue",
+  //       callback: () => "clue",
+  //     },
+  //     {
+  //       action: "Person",
+  //       default: false,
+  //       label: "Person",
+  //       callback: () => "person",
+  //     },
+  //     {
+  //       action: "Question",
+  //       default: false,
+  //       label: "Question",
+  //       callback: () => "question",
+  //     },
+  //     {
+  //       action: "Opportunity",
+  //       default: false,
+  //       label: "Opportunity",
+  //       callback: () => "opportinity",
+  //     },  
+  //   ],
+  //   rejectClose: false,
+  // });
+img: assets/icons/game-icons.net/pin.svg
+author: 1XTXxTps6bog8pAn
+scope: global
+folder: null
+ownership:
+  default: 2
+  1XTXxTps6bog8pAn: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: pbta
+  systemVersion: 1.1.13
+  createdTime: 1743262622134
+  modifiedTime: 1743262623863
+  lastModifiedBy: 1XTXxTps6bog8pAn
+_id: Nd1lGCDxwrZTNUqI
+sort: 300000
+_key: '!macros!Nd1lGCDxwrZTNUqI'
+

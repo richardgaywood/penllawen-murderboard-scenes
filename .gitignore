@@ -1,3 +1,21 @@
+# temp non-free images
+/src/assets/imgs/blank-index-card.jpg
+/src/assets/imgs/corkboard-tiled-4000x2508.jpg
+/src/assets/imgs/corkboard-tiling-1024x1024.jpg
+/src/assets/imgs/index-card-cropped.jpg
+/src/assets/imgs/index-card-cropped-clue.png
+/src/assets/imgs/index-card-cropped-location.png
+/src/assets/imgs/index-card-cropped-opportunity.png
+/src/assets/imgs/index-card-cropped-person.png
+/src/assets/imgs/index-card-cropped-question.png
+/src/assets/imgs/post-it-note-turned.png
+/src/assets/imgs/pushpin-png-27702.png
+
+# build artefacts
+build/
+dist/
+
+
 # Logs
 logs
 *.log
@@ -102,7 +120,6 @@ dist
 
 # vuepress v2.x temp and cache directory
 .temp
-.cache
 
 # vitepress build output
 **/.vitepress/dist
@@ -134,3 +151,4 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+

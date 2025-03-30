@@ -1,0 +1,262 @@
+name: Canonical blank
+navigation: false
+navName: ''
+background:
+  src: >-
+    modules/penllawen-murderboard-scenes/assets/imgs/corkboard-tiled-4000x2508.jpg
+  anchorX: 0
+  anchorY: 0
+  offsetX: 0
+  offsetY: 0
+  fit: fill
+  scaleX: 1
+  scaleY: 1
+  rotation: 0
+  tint: '#ffffff'
+  alphaThreshold: 0
+foreground: null
+foregroundElevation: 20
+thumb: worlds/swade-quickref-dev/assets/scenes/72A76BeTj54VbFQz-thumb.webp
+width: 4000
+height: 2508
+padding: 0.1
+initial:
+  x: 2055
+  'y': 1104
+  scale: 0.5460373964256477
+backgroundColor: '#999999'
+grid:
+  type: 0
+  size: 100
+  style: solidLines
+  thickness: 1
+  color: '#000000'
+  alpha: 0.2
+  distance: 5
+  units: ft
+tokenVision: false
+fog:
+  exploration: false
+  overlay: null
+  colors:
+    explored: null
+    unexplored: null
+environment:
+  darknessLevel: 0
+  darknessLock: false
+  globalLight:
+    enabled: false
+    alpha: 0.5
+    bright: false
+    color: null
+    coloration: 1
+    luminosity: 0
+    saturation: 0
+    contrast: 0
+    shadows: 0
+    darkness:
+      min: 0
+      max: 1
+  cycle: true
+  base:
+    hue: 0
+    intensity: 0
+    luminosity: 0
+    saturation: 0
+    shadows: 0
+  dark:
+    hue: 0.7138888888888889
+    intensity: 0
+    luminosity: -0.25
+    saturation: 0
+    shadows: 0
+drawings:
+  - _id: SfPh8Lf1GRxHHxKx
+    author: 1XTXxTps6bog8pAn
+    shape:
+      type: r
+      width: 483
+      height: 379
+      radius: null
+      points: []
+    x: 999
+    'y': 823
+    elevation: 0
+    sort: 2
+    rotation: 359
+    bezierFactor: 0.15
+    fillType: 2
+    fillColor: '#ffffff'
+    fillAlpha: 1
+    strokeWidth: 0
+    strokeColor: '#ffffff'
+    strokeAlpha: 1
+    texture: >-
+      modules/penllawen-murderboard-scenes/assets/imgs/index-card-cropped-opportunity.png
+    text: Resolve the mystery by...
+    fontFamily: Permanent Marker
+    fontSize: 30
+    textColor: '#171717'
+    textAlpha: 0.9
+    hidden: true
+    locked: false
+    interface: false
+    flags:
+      tagger: {}
+      advanced-drawing-tools:
+        textStyle:
+          strokeThickness: 0
+          wordWrapWidth: 95%
+          dropShadow: false
+          align: center
+    _key: '!scenes.drawings!BtyFAoFYkxO2o5P9.SfPh8Lf1GRxHHxKx'
+  - author: 1XTXxTps6bog8pAn
+    shape:
+      type: r
+      width: 483
+      height: 379
+      radius: null
+      points: []
+    x: 599
+    'y': 1314
+    elevation: 0
+    sort: -1
+    rotation: 0
+    bezierFactor: 0.15
+    fillType: 2
+    fillColor: '#ffffff'
+    fillAlpha: 1
+    strokeWidth: 0
+    strokeColor: '#ffffff'
+    strokeAlpha: 1
+    texture: modules/penllawen-murderboard-scenes/assets/imgs/index-card-cropped.jpg
+    text: |-
+      THE KEY OF THE ...
+      Each Latchkey...
+    fontFamily: Permanent Marker
+    fontSize: 40
+    textColor: '#171717'
+    textAlpha: 0.9
+    hidden: true
+    locked: false
+    interface: false
+    flags:
+      tagger: {}
+      advanced-drawing-tools:
+        textStyle:
+          strokeThickness: 0
+          wordWrapWidth: 95%
+          dropShadow: false
+          align: center
+    _id: Irv3aSSppcD6vWNr
+    _key: '!scenes.drawings!BtyFAoFYkxO2o5P9.Irv3aSSppcD6vWNr'
+  - texture: >-
+      modules/penllawen-murderboard-scenes/assets/imgs/index-card-cropped-question.png
+    text: ...
+    rotation: 1
+    author: 1XTXxTps6bog8pAn
+    x: 519
+    'y': 392
+    shape:
+      type: r
+      width: 483
+      height: 379
+      radius: null
+      points: []
+    elevation: 0
+    sort: 1
+    bezierFactor: 0.15
+    fillType: 2
+    fillColor: '#ffffff'
+    fillAlpha: 1
+    strokeWidth: 0
+    strokeColor: '#ffffff'
+    strokeAlpha: 1
+    fontFamily: Permanent Marker
+    fontSize: 48
+    textColor: '#171717'
+    textAlpha: 0.9
+    hidden: true
+    locked: false
+    interface: false
+    flags:
+      tagger: {}
+      advanced-drawing-tools:
+        textStyle:
+          strokeThickness: 0
+          wordWrapWidth: 95%
+          dropShadow: false
+          align: center
+    _id: NZ4inFcvPduft4CE
+    _key: '!scenes.drawings!BtyFAoFYkxO2o5P9.NZ4inFcvPduft4CE'
+tokens: []
+lights: []
+notes: []
+sounds: []
+regions: []
+templates: []
+tiles:
+  - texture:
+      src: modules/penllawen-murderboard-scenes/assets/imgs/post-it-note-turned.png
+      anchorX: 0.5
+      anchorY: 0.5
+      offsetX: 0
+      offsetY: 0
+      fit: fill
+      scaleX: 1
+      scaleY: 1
+      rotation: 0
+      tint: '#ffffff'
+      alphaThreshold: 0.75
+    x: 1048
+    'y': 1753
+    width: 276
+    height: 267
+    elevation: 1
+    sort: 2
+    occlusion:
+      mode: 0
+      alpha: 0
+    _id: aIhFIAIvqc3tsIhQ
+    rotation: 0
+    alpha: 1
+    hidden: true
+    locked: false
+    restrictions:
+      light: false
+      weather: false
+    video:
+      loop: true
+      autoplay: true
+      volume: 0
+    flags:
+      totm-manager:
+        order: null
+      tagger: {}
+    _key: '!scenes.tiles!BtyFAoFYkxO2o5P9.aIhFIAIvqc3tsIhQ'
+walls: []
+playlist: null
+playlistSound: null
+journal: null
+journalEntryPage: null
+weather: ''
+folder: null
+ownership:
+  default: 0
+  88cztJFw38TXpmQJ: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: swade
+  systemVersion: 4.4-dev
+  createdTime: 1743265492617
+  modifiedTime: 1743265492617
+  lastModifiedBy: 88cztJFw38TXpmQJ
+navOrder: 0
+_id: BtyFAoFYkxO2o5P9
+active: false
+sort: 0
+_key: '!scenes!BtyFAoFYkxO2o5P9'
+

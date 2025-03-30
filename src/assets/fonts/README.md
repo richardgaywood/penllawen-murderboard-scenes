@@ -1,0 +1,1 @@
+Permanent Marker font from Google Fonts: https://fonts.google.com/specimen/Permanent+Marker

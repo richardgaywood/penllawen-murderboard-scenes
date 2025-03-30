@@ -1,0 +1,135 @@
+name: Make new note OBSOLETE
+type: script
+command: |-
+  const cardOffsetAngles = [0, 1, 2, 359, 358];
+
+  const { DialogV2 } = foundry.applications.api;
+  // const { StringField } = foundry.data.fields;
+
+  // not currently used
+  const cardTypes = [
+    "clue", "location", "question", "opportunity", "person"
+  ];
+
+
+  const cardType = await DialogV2.wait({
+    window: { title: "What type of card?" },
+    form: { closeOnSubmit: true },
+    content: "Choose card type",
+    buttons: [
+      {
+        action: "Location",
+        default: true,
+        label: "Location",
+        callback: () => "location",
+      },
+      {
+        action: "Clue",
+        default: false,
+        label: "Clue",
+        callback: () => "clue",
+      },
+      {
+        action: "Person",
+        default: false,
+        label: "Person",
+        callback: () => "person",
+      },
+      {
+        action: "Question",
+        default: false,
+        label: "Question",
+        callback: () => "question",
+      },
+      {
+        action: "Opportunity",
+        default: false,
+        label: "Opportunity",
+        callback: () => "opportinity",
+      },  
+    ],
+    rejectClose: true,
+  });
+
+
+
+
+  let draw = makeDrawing("...", cardType);
+  //console.log(draw);
+  DrawingDocument.create(draw, {parent: canvas.scene});
+
+  function makeDrawing(initialText, cardType) {
+    const angle = cardOffsetAngles[Math.floor(
+        Math.random()*cardOffsetAngles.length)];
+      
+    return {
+      "texture": `modules/penllawen-murderboard-scenes/imgs/index-card-cropped-${cardType}.png`,
+      "text": initialText,
+      "rotation": angle,
+
+      "author": "1XTXxTps6bog8pAn",
+      
+      "x": 2000 + Math.floor(Math.random()*200),
+      "y": 1000 + Math.floor(Math.random()*200),
+
+      // boilerplate below here
+      "shape": {
+          "type": "r",
+          "width": 483,
+          "height": 379,
+          "radius": null,
+          "points": []
+      },
+      "elevation": 0,
+      "sort": 1,
+      
+      "bezierFactor": 0.15,
+      "fillType": 2,
+      "fillColor": "#ffffff",
+      "fillAlpha": 1,
+      "strokeWidth": 0,
+      "strokeColor": "#ffffff",
+      "strokeAlpha": 1,
+      "fontFamily": "Permanent Marker",
+      "fontSize": 48,
+      "textColor": "#171717",
+      "textAlpha": 0.9,
+      "hidden": false,
+      "locked": false,
+      "interface": false,
+      "flags": {
+          "tagger": {},
+          "advanced-drawing-tools": {
+              "textStyle": {
+                  "strokeThickness": 0,
+                  "wordWrapWidth": "95%",
+                  "dropShadow": false,
+                  "align": "center"
+              }
+          }
+      },
+      // "_id": "s5i14guVTECDTRcw"
+      };
+      
+  }
+img: assets/icons/game-icons.net/pin.svg
+author: 1XTXxTps6bog8pAn
+scope: global
+folder: null
+ownership:
+  default: 0
+  1XTXxTps6bog8pAn: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: pbta
+  systemVersion: 1.1.13
+  createdTime: 1742827375237
+  modifiedTime: 1743262623863
+  lastModifiedBy: 1XTXxTps6bog8pAn
+_id: QdaGDI9xcpvVZVS8
+sort: 100000
+_key: '!macros!QdaGDI9xcpvVZVS8'
+

@@ -1,0 +1,79 @@
+name: Change ownership
+type: script
+author: 1XTXxTps6bog8pAn
+img: assets/icons/game-icons.net/person.svg
+scope: global
+command: |-
+  const { DialogV2 } = foundry.applications.api;
+
+
+  const users =  Array.from(game.users.values());
+
+  const userButtons = users.map(
+      u => {
+          return {
+              action: u._id,
+              label: u.name,
+              callback: () => processUser(u._id),
+          }
+      }
+  );
+
+  DialogV2.wait({
+    window: { title: "What type of card?" },
+    form: { closeOnSubmit: true },
+    content: "Choose card type",
+    buttons: userButtons,
+    rejectClose: false,
+  });
+
+
+  function processUser(id) {
+      console.log("in callback", id);
+
+      // doesn't seem to work for drawings :(
+      const permissionBlock = {
+          default: CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER,
+          id: CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER,
+      }; 
+      
+      const drawings = Array.from(canvas.scene.drawings.values());
+      
+      console.log("before", drawings.map(d => `${d._id}, ${d.hidden} -> ${d.author.name}`));
+
+      const updates = drawings.filter(d => !d.hidden)
+              .map(d => { 
+                  return {
+                      _id: d._id,
+                      author: game.users.get(id),
+                      permission: permissionBlock
+                      
+                  }})
+
+      console.log(updates);
+      
+      canvas.scene.updateEmbeddedDocuments("Drawing", updates);
+
+      console.log("after", Array.from(canvas.scene.drawings.values()).map(d => `${d._id}, ${d.hidden} -> ${d.author.name}`));
+
+
+      
+  }
+folder: null
+ownership:
+  default: 0
+  1XTXxTps6bog8pAn: 3
+flags: {}
+_stats:
+  compendiumSource: null
+  duplicateSource: null
+  coreVersion: '12.331'
+  systemId: pbta
+  systemVersion: 1.1.13
+  createdTime: 1743262623845
+  modifiedTime: 1743262623863
+  lastModifiedBy: 1XTXxTps6bog8pAn
+_id: p70FSMTUIJicIud8
+sort: 200000
+_key: '!macros!p70FSMTUIJicIud8'
+

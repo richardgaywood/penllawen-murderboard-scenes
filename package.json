@@ -1,0 +1,15 @@
+{
+  "name": "@richardgaywood/penllawen-murderboard-scenes",
+  "version": "0.0.1",
+  "description": "Scenes and tools for drawing murderboards in FoundryVTT",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:dev"
+  },
+  "author": "Richard Gaywood",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.0.4",
+    "rollup-config-badger-den": "^1.6.1"
+  }
+}

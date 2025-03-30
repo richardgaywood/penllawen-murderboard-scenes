@@ -1,0 +1,43 @@
+{
+  "version": "0.0.1",
+  "title": "Murderboard Scenes",
+  "description": "Scenes and tools for drawing murderboards in FoundryVTT",
+  "projectUrl": "https://github.com/richardgaywood/penllawen-murderboard-scenes",
+  "entryPoints": {
+    "lang": "assets/**",
+    "templates": "templates/*",
+    "compendia": {
+      "path": "packs/*/",
+      "type": {
+        "macros": "Macro",
+        "scenes": "Scene"
+      },
+      "label": {
+        "macros": "Murderboard Macros",
+        "scenes": "Murderboard Scenes"
+      }
+    }
+  },
+  "package": {
+    "name":"%config.id%-%config.version%",
+    "protected": false,
+    "manifest": "",
+    "download": ""
+  },
+  "dest":"../dist",
+  "dependencies": {
+    "core": [
+      "12"
+    ]
+  },
+  "storage": true,
+  "static": [
+    "static"
+  ],
+  "authors": [
+    {
+      "name": "richardgaywood",
+      "url": "https://github.com/richardgaywood"
+    }
+  ]
+}
