@@ -6,10 +6,9 @@
 
 // import { registerSettings } from "./settings.js";
 import {log, logError} from "./logger.mjs";
-import {CONSTANTS} from "./init.mjs";
+import {CONSTANTS} from "./constants.mjs";
 
 const { DialogV2 } = foundry.applications.api;
-
 
 // const BASE_FONT_SIZE = 15;
 // const PIN_COLORS = ["redPin.webp", "bluePin.webp", "yellowPin.webp", "greenPin.webp"];
@@ -18,8 +17,6 @@ const { DialogV2 } = foundry.applications.api;
 const cardOffsetAngles = [358, 359, 359, 0, 1, 1, 2];
 const cardTypesPC = [ "clue", "location", "person" ];
 const cardTypesGM = [ "question", "opportunity" ];
-
-
 
 export async function createNote() {
     const scene = canvas.scene;

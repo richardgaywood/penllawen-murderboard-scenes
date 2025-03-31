@@ -1,16 +1,11 @@
-import { log } from "./logger.mjs";
 import {changeOwnerOfAllVisibleDrawings, createNote} from "./murderboards.mjs";
 
-export const CONSTANTS = {
-    moduleName: "penllawen-murderboard-scenes",
-    modulePath: "modules/penllawen-murderboard-scenes/",
-    debug: true,
-};
+
 
 Hooks.on("getSceneControlButtons", (controls) => {
     const drawingTools = controls.find((c) => c.name === "drawings");
     if (!drawingTools) return;
-    log("Adding button to drawing tools via GetSceneControlButtons hook");
+    // log("Adding button to drawing tools via GetSceneControlButtons hook");
     drawingTools.tools.push(
         //     { name: "createStickyNote", title: "Create Sticky Note", icon: "fas fa-sticky-note", onClick: () => createNote("sticky"), button: true },
         { name: "createIndexCard", title: "Create Index Card", icon: "fa-regular fa-subtitles", onClick: () => createNote(), button: true },
@@ -28,7 +23,7 @@ Hooks.once("init", () => {
     //     makeDefault: false,
     // });
 
-    log("Murderboard Scenes module initialized.");
+    console.log("Murderboard Scenes module initialized.");
 });
 
 

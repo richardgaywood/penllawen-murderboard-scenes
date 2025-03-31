@@ -1,4 +1,4 @@
-import {CONSTANTS} from "./init.mjs";
+import {CONSTANTS} from "./constants.mjs";
 
 export function log(...args) {
     if (!CONSTANTS.debug) return;

@@ -30,6 +30,25 @@
       "12"
     ]
   },
+
+  "profile": {
+    "dev":{
+      "entryPoints": {
+        "main": ["scripts/init.mjs"]
+      },
+      "compress":false,
+      "sourcemaps": true,
+      "clean": true,
+      "hmr": true,
+      "static": ["dev/html"],
+      "package": {
+        "create": true,
+        "protected": true,
+        "manifest": "https://r2.foundryvtt.com/packages-public/%config.id%/module.json"
+      }
+    }
+  },
+
   "storage": true,
   "static": [
     "static"

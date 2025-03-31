@@ -4,7 +4,8 @@
   "description": "Scenes and tools for drawing murderboards in FoundryVTT",
   "main": "index.js",
   "scripts": {
-    "dev": "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:dev"
+    "dev": "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:dev -w --config-pack",
+    "unpack": "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:dev --config-unpack only"
   },
   "author": "Richard Gaywood",
   "license": "Apache-2.0",
