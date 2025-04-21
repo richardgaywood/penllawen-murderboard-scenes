@@ -1,3 +1,5 @@
+import { CONSTANTS } from "./constants.mjs";  
+import { MurderboardNoteSheet } from "./murderboard-note-sheet.mjs";
 import {changeOwnerOfAllVisibleDrawings, createNote} from "./murderboards.mjs";
 
 
@@ -22,6 +24,18 @@ Hooks.once("init", () => {
     //     types: ["base"],
     //     makeDefault: false,
     // });
+
+    DocumentSheetConfig.registerSheet(
+        DrawingDocument, 
+        CONSTANTS.moduleName, 
+        MurderboardNoteSheet, 
+        {
+            label: "Murderboard Note Sheet",
+            //types: ["base"],
+            makeDefault: false,
+        }
+    );
+
 
     console.log("Murderboard Scenes module initialized.");
 });

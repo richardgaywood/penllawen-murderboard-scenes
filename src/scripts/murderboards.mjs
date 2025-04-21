@@ -105,7 +105,10 @@ async function makeDrawing(initialText, cardType) {
                     "dropShadow": false,
                     "align": "center"
                 }
-            }
+            },
+            "core" : {
+              "sheetClass": "penllawen-murderboard-scenes.MurderboardNoteSheet",
+            },
         },
     };
 

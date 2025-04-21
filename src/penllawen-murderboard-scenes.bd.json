@@ -4,6 +4,7 @@
   "description": "Scenes and tools for drawing murderboards in FoundryVTT",
   "projectUrl": "https://github.com/richardgaywood/penllawen-murderboard-scenes",
   "entryPoints": {
+    "main": ["scripts/**.mjs"],
     "lang": "assets/**",
     "templates": "templates/*",
     "compendia": {
@@ -24,7 +25,7 @@
     "manifest": "",
     "download": ""
   },
-  "dest":"../dist",
+  "dest":"../build",
   "dependencies": {
     "core": [
       "12"
@@ -32,7 +33,7 @@
   },
 
   "profile": {
-    "dev":{
+    "build":{
       "entryPoints": {
         "main": ["scripts/init.mjs"]
       },
@@ -40,10 +41,9 @@
       "sourcemaps": true,
       "clean": true,
       "hmr": true,
-      "static": ["dev/html"],
+      "static": ["build/html"],
       "package": {
         "create": true,
-        "protected": true,
         "manifest": "https://r2.foundryvtt.com/packages-public/%config.id%/module.json"
       }
     }
@@ -51,7 +51,8 @@
 
   "storage": true,
   "static": [
-    "static"
+    "static",
+    "assets"
   ],
   "authors": [
     {
