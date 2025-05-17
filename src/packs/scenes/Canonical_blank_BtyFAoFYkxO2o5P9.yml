@@ -3,7 +3,7 @@ navigation: false
 navName: ''
 background:
   src: >-
-    modules/penllawen-murderboard-scenes/assets/imgs/corkboard-tiled-4000x2508.jpg
+    modules/penllawen-murderboard-scenes/assets/imgs/corkboard-tiled-4000x2508.webp
   anchorX: 0
   anchorY: 0
   offsetX: 0
@@ -16,7 +16,7 @@ background:
   alphaThreshold: 0
 foreground: null
 foregroundElevation: 20
-thumb: worlds/swade-quickref-dev/assets/scenes/72A76BeTj54VbFQz-thumb.webp
+thumb: modules/penllawen-murderboard-scenes/assets/imgs/pushpin-png-27702.png
 width: 4000
 height: 2508
 padding: 0.1
@@ -75,8 +75,8 @@ drawings:
     author: 1XTXxTps6bog8pAn
     shape:
       type: r
-      width: 483
-      height: 379
+      width: 300
+      height: 235
       radius: null
       points: []
     x: 999
@@ -92,7 +92,7 @@ drawings:
     strokeColor: '#ffffff'
     strokeAlpha: 1
     texture: >-
-      modules/penllawen-murderboard-scenes/assets/imgs/index-card-cropped-opportunity.png
+      modules/penllawen-murderboard-scenes/assets/imgs/index-card-cropped-opportunity-300x235.jpg
     text: Resolve the mystery by...
     fontFamily: Permanent Marker
     fontSize: 30
@@ -113,8 +113,8 @@ drawings:
   - author: 1XTXxTps6bog8pAn
     shape:
       type: r
-      width: 483
-      height: 379
+      width: 300
+      height: 235
       radius: null
       points: []
     x: 599
@@ -129,7 +129,7 @@ drawings:
     strokeWidth: 0
     strokeColor: '#ffffff'
     strokeAlpha: 1
-    texture: modules/penllawen-murderboard-scenes/assets/imgs/index-card-cropped.jpg
+    texture: modules/penllawen-murderboard-scenes/assets/imgs/index-card-cropped-300x235.jpg
     text: |-
       THE KEY OF THE ...
       Each Latchkey...
@@ -151,7 +151,7 @@ drawings:
     _id: Irv3aSSppcD6vWNr
     _key: '!scenes.drawings!BtyFAoFYkxO2o5P9.Irv3aSSppcD6vWNr'
   - texture: >-
-      modules/penllawen-murderboard-scenes/assets/imgs/index-card-cropped-question.png
+      modules/penllawen-murderboard-scenes/assets/imgs/index-card-cropped-question-300x235.jpg
     text: ...
     rotation: 1
     author: 1XTXxTps6bog8pAn
@@ -159,8 +159,8 @@ drawings:
     'y': 392
     shape:
       type: r
-      width: 483
-      height: 379
+      width: 300
+      height: 235
       radius: null
       points: []
     elevation: 0
