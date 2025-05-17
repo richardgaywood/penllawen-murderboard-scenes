@@ -4,8 +4,8 @@
   "description": "Scenes and tools for drawing murderboards in FoundryVTT",
   "main": "index.js",
   "scripts": {
-    "build:":       "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:build    --config-pack",
-    "build:watch":  "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:build -w --config-pack",
+    "build:":       "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:build",
+    "build:watch":  "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:build -w",
     "unpack":       "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:build    --config-unpack only",
     "unpack:watch": "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:build -w --config-unpack only",
     "pack":         "rollup -c node:rollup-config-badger-den --config-den src/penllawen-murderboard-scenes:build     --config-pack only"

@@ -1,6 +1,6 @@
 name: Canonical blank
 navigation: false
-navName: ''
+navName: 'xxx'
 background:
   src: >-
     modules/penllawen-murderboard-scenes/assets/imgs/corkboard-tiled-4000x2508.webp
